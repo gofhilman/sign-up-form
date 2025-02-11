@@ -62,9 +62,13 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    flex: 3;
-    margin: 0 50px;
+    flex: 3;  
     gap: 20px;
+    background-color: rgba(149, 36, 171, 0.02);
+}
+
+.form-header, .form-body, .form-submit, .engage {
+    padding: 0 50px;
 }
 
 .title { 
@@ -72,6 +76,8 @@ main {
     justify-content: center;
     align-items: center;
     margin: 400px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
 }
 
 .logo {
@@ -102,7 +108,18 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     gap: 10px 30px;
-    width: 80%;
+    padding-right: 20%;
+    padding-bottom: 20px;
+    box-shadow: 3px 3px 5px lightgray;
+}
+
+.engage {
+    margin: 0;
+    padding: 20px 0 8px 50px;
+}
+
+.form-body, .engage {
+    background-color: white;
 }
 
 label {
@@ -110,10 +127,41 @@ label {
     font-weight: 600;
 }
 
+input:focus {
+    outline: 1.1px solid rgb(44, 160, 236);
+    box-shadow: 3px 3px 5px lightgray;
+}
+
+input:user-invalid {
+    outline: 1.1px solid red;
+}
+
+.password::after {
+    display: block;
+    content: ' (at least 6 characters)';
+    font-size: 0.6rem;
+    font-weight: 400;
+    color: red;
+}
+
 span {
     display: block;
 }
 
 .form-submit {
-    margin-top: 50px;
+    margin-top: 30px;
+}
+
+.submit-button {
+    background-color: rgb(149, 36, 171);
+    color: white;
+    font-size: 1rem;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.login-question {
+    font-size: 0.9rem;
 }
